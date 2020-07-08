@@ -1,0 +1,12 @@
+const ActionTypes = {
+  Home: {
+    GET_IMAGE_LIST: "GET_IMAGE_LIST",
+  },
+  Common: {
+    REQUEST_ERROR_STATUS: "REQUEST_ERROR_STATUS",
+    RESPONSE_ERROR_STATUS: "RESPONSE_ERROR_STATUS",
+    REPORT_UNHANDLED_ERROR: "REPORT_UNHANDLED_ERROR",
+  },
+};
+
+export default ActionTypes;

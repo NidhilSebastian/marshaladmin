@@ -1,0 +1,7 @@
+$app-prefix: "msa";
+$app-common-serif: Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+@import "home";
+@import "login";
+@import "leftNavigation";

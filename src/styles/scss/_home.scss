@@ -1,0 +1,25 @@
+.#{$app-prefix}-connect-me-request-btn {
+  font-size: 25px;
+  padding: 3px 30px;
+  width: 250px;
+  margin: auto;
+  margin-top: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  background: #168196;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  border: none;
+}
+
+.#{$app-prefix}-img-gallery {
+  display: block;
+  margin: 0 auto;
+  height: 50;
+  width: 25%;
+  border: 8px solid #fff;
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px #ccc;
+  margin-bottom: 10px;
+}
