@@ -45,25 +45,19 @@ export class NavbarLeft extends Component {
 
   render() {
     return (
-      <div className="msa-nav-bar-left">
+      <div>
         <ul className="msa-nav">
           <li
             className={this.state.homeLinkClassName}
             onClick={(e) => this.onLinkClick(NAVIGATION_LINKs.HOME_LINK, e)}
           >
-            <Link to="/home">
-              <img src={homeIcon} alt="" />
-              &nbsp; &nbsp; Home
-            </Link>
+            <Link to="/home">Home</Link>
           </li>
           <li
             className={this.state.profileLinkClassName}
             onClick={(e) => this.onLinkClick(NAVIGATION_LINKs.PROFILE_LINK, e)}
           >
-            <Link to="/contacts">
-              <img src={contactIcon} alt="" />
-              &nbsp; &nbsp; &nbsp; &nbsp;My Profile
-            </Link>
+            <Link to="/contacts">My Profile</Link>
           </li>
         </ul>
         <ul className="msa-nav msa-nav-align-bottom">
@@ -72,7 +66,7 @@ export class NavbarLeft extends Component {
             onClick={(e) => this.onLinkClick(NAVIGATION_LINKs.LOGOUT_LINK, e)}
           >
             <Link to="/">
-              <i className="fal fa-sign-in-alt"></i>Logout
+              <i className="fa fa-lock"></i>Logout
             </Link>
           </li>
         </ul>

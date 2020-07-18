@@ -12,7 +12,7 @@ export const getRequestErrorAction = (errorMessage) => {
 };
 
 export const getResponseErrorAction = (errorMessage) => {
-  NotificationManager.warning(errorMessage, "Warning message!", 2000);
+  NotificationManager.error(errorMessage, "Warning message!", 2000);
   return {
     type: ActionTypes.Common.RESPONSE_ERROR_STATUS,
     data: {

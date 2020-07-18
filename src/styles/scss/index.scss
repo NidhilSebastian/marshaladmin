@@ -1,7 +1,10 @@
 $app-prefix: "msa";
+$msa-vertical-height: 84.2vh;
 $app-common-serif: Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 @import "home";
-@import "login";
+@import "layout";
 @import "leftNavigation";
+@import "login";
+@import "schoolOnboarding";

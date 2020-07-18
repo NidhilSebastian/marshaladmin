@@ -12,20 +12,24 @@ code {
     monospace;
 }
 
-.msa-content-body {
-  background-color: #f5f5f5;
-  width: 100%;
-  height: 100vh;
-  padding-left: 60px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.float-label-control label {
+  position: absolute;
+  font-weight: normal;
+  margin-top: -1.6em;
+  left: 0.08em;
+  color: #404040;
+  z-index: 1;
+  font-size: 0.95em;
+  -moz-animation: float-labels 300ms none ease-out;
+  -webkit-animation: float-labels 300ms none ease-out;
+  -o-animation: float-labels 300ms none ease-out;
+  -ms-animation: float-labels 300ms none ease-out;
+  -khtml-animation: float-labels 300ms none ease-out;
+  animation: float-labels 300ms none ease-out; /* There is a bug sometimes pausing the animation. This avoids that.*/
+  animation-play-state: running !important;
+  -webkit-animation-play-state: running !important;
 }
 
-.msa-col-body {
-  height: 100vh;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow-y: auto;
+.float-label-control input:placeholder-shown + label {
+  z-index: -1;
 }

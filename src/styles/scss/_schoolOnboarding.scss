@@ -1,0 +1,26 @@
+.msa-input-box-01 {
+  font-size: 14px;
+  background: #fdfdfd;
+  border: 1px solid #e4e4e4;
+  width: 100%;
+  color: #17a2b8;
+  border-radius: 2px;
+  padding: 10px 10px;
+  font-family: Helvetica, Arial, "Times New Roman";
+}
+
+.msa-input-box-01:focus {
+  border-color: #17a2b8 !important;
+}
+
+.msa-input-box-01::-webkit-input-placeholder {
+  font-weight: normal;
+}
+
+.msa-input-box-01:-ms-input-placeholder {
+  font-weight: normal;
+}
+
+.msa-input-box-01::placeholder {
+  font-weight: normal;
+}

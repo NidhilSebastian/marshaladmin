@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { actionCreators } from "../../store/reducers/home";
+import SchoolOnboarding from "../schoolOnboarding/schoolOnboarding";
 
 export class Home extends Component {
   async componentDidMount() {
@@ -10,13 +11,7 @@ export class Home extends Component {
 
   render() {
     let images = this.props.imageList;
-    return (
-      <div className="row">
-        {images.map((image) => (
-          <img className="msa-img-gallery" src={image.imageUrl} alt=""></img>
-        ))}
-      </div>
-    );
+    return <SchoolOnboarding></SchoolOnboarding>;
   }
 }
 

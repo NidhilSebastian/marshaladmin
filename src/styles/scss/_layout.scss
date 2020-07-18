@@ -1,0 +1,45 @@
+.container-fluid {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.#{$app-prefix}-header-raw {
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.#{$app-prefix}-header-login-div {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+}
+.#{$app-prefix}-header-login-label {
+  padding-right: 50px;
+  color: #168196;
+}
+.#{$app-prefix}-header-login-logo {
+  padding-left: 5px;
+}
+
+.#{$app-prefix}-footer-raw {
+  width: 100%;
+  height: 30px;
+  background-color: #f5f5f5;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+.#{$app-prefix}-footer-label {
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
