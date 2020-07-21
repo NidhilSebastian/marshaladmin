@@ -2,11 +2,31 @@
   font-size: 14px;
   background: #fdfdfd;
   border: 1px solid #e4e4e4;
-  width: 100%;
+  width: 95%;
   color: #17a2b8;
   border-radius: 2px;
   padding: 10px 10px;
   font-family: Helvetica, Arial, "Times New Roman";
+}
+.disInline{
+  display: inline-block;
+}
+
+.react-tel-input-01 .form-control {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: .01rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 48px;
+  margin-left: 0;
+  background: #FFFFFF;
+  border: 1px solid #CACACA;
+  border-radius: 5px;
+  line-height: 25px;
+  height: 43px !important;
+  width: 530px !important;
+  outline: none;
 }
 
 .msa-input-box-01:focus {
