@@ -25,7 +25,7 @@ const Layout = (props) => {
         <div className="col-sm-11">
           <div className="msa-content-body">
             <div className="row">
-              <div className="col-sm-11 msa-col-body">
+              <div className="col-sm-12 msa-col-body">
                 <ContentPageRouting></ContentPageRouting>
               </div>
             </div>

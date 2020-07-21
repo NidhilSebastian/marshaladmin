@@ -14,6 +14,7 @@ const TextBox = (props) => {
       className={props.className}
       disabled={props.disabled}
       tabIndex={props.tabIndex}
+      title={props.title}
     ></input>
   );
 };

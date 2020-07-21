@@ -57,7 +57,7 @@ export class NavbarLeft extends Component {
             className={this.state.profileLinkClassName}
             onClick={(e) => this.onLinkClick(NAVIGATION_LINKs.PROFILE_LINK, e)}
           >
-            <Link to="/contacts">My Profile</Link>
+            <Link to="/profile">My Profile</Link>
           </li>
         </ul>
         <ul className="msa-nav msa-nav-align-bottom">
