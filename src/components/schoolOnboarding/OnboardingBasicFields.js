@@ -4,8 +4,17 @@ import DropDown from "../common/DropDown";
 import Header from "../common/Header";
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import Switch from "react-switch";
 
 export class OnboardingBasicFields extends Component {
+  constructor() {
+    super();
+    this.state = { checked: false };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(checked) {
+    this.setState({ checked });
+  }
   render() {
     return (
       <>
@@ -280,27 +289,15 @@ export class OnboardingBasicFields extends Component {
         </div>
         <div className="raw pb-4">
           <div className="col-md-3 text-left disInline">
-            <label>Library Available</label>
+            <label className="disInline">Library Available</label>
+          </div>
+          <div className="col-md-3 text-left disInline rbdSwitch">
+          <label>
+            <Switch offColor='#FF0000' onChange={this.handleChange} checked={this.state.checked} />
+          </label>
           </div>
           <div className="col-md-3 text-left disInline">
-          <label>Yes</label>
-          <Text
-              id="male"
-              name="gender"
-              value="male"
-              type="radio"
-              className="msa-input-box-01"
-            ></Text>
-          </div>
-          <div className="col-md-3 text-left disInline">
-          <label>No</label>
-          <Text
-              id="female"
-              name="gender"
-              value="female"
-              type="radio"
-              className="msa-input-box-01"
-            ></Text>
+          
           </div>       
         </div>
         <div className="raw pb-4">
@@ -327,7 +324,7 @@ export class OnboardingBasicFields extends Component {
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
-            <label>Upload Image</label>
+            <label className="disInline">Upload Image</label>
             <Text
               id="uploadimg"
               name="uploadimg"
@@ -337,7 +334,7 @@ export class OnboardingBasicFields extends Component {
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
-          <label>Upload Logo</label>
+          <label className="disInline">Upload Logo</label>
           <Text
               id="uploadlogo"
               name="uploadlogo"
