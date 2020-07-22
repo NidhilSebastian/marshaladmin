@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import girmitilogo from "../../images/Nidhil.jpg";
 import TextBox from "../common/Textbox";
+import Button from "../common/Button";
 
 export class ProfileHeader extends Component {
   constructor(props) {
@@ -40,7 +41,28 @@ export class ProfileHeader extends Component {
               title="Clik to edit"
             ></TextBox>
           </div>
-          <div className="col-md-8 text-left pt-4"></div>
+          <div className="col-md-6 text-left"></div>
+          <div className="col-md-1 text-left pt-4">
+            <Button
+              id="saveprofile"
+              alignment="inline-vertical-top search-btn"
+              icon="fa fa-save"
+              text="Save"
+              type="submit"
+              className="btn btn-primary"
+            />
+            &nbsp;
+          </div>
+          <div className="col-md-1 text-left pt-4">
+            <Button
+              id="cancelprofile"
+              alignment="inline-vertical-top search-btn"
+              icon="fa fa-times"
+              text="Cancel"
+              type="submit"
+              className="btn btn-light"
+            />
+          </div>
         </div>
       </>
     );

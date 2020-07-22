@@ -6,7 +6,7 @@ import UserProfile from "../components/Profile/userProfile";
 const ContentPageRouting = () => {
   return (
     <Switch>
-      <Route exact path="/" component={UserProfile}></Route>
+      <Route exact path="/" component={Home}></Route>
       <Route exact path="/home" component={Home}></Route>
       <Route exact path="/profile" component={UserProfile}></Route>
     </Switch>
