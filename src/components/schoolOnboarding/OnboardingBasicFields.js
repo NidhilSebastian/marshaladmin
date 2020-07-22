@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Text from "../common/Textbox";
 import DropDown from "../common/DropDown";
+import Header from "../common/Header";
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
@@ -8,6 +9,7 @@ export class OnboardingBasicFields extends Component {
   render() {
     return (
       <>
+      <Header headerContent="School Onboarding Form"/>
         <div className="raw pb-4 pt-4">
           <div className="col-md-6 text-left disInline">
             <Text
@@ -90,7 +92,7 @@ export class OnboardingBasicFields extends Component {
           </div>
           <div className="col-md-6 text-left disInline">          
             <PhoneInput
-              country={'us'}
+              country={'in'}
               id="primaryphoneno"
               name="primaryphoneno"
               value={this.props.primaryphoneno || ""}
@@ -102,7 +104,7 @@ export class OnboardingBasicFields extends Component {
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
           <PhoneInput
-              country={'us'}
+              country={'in'}
               id="secondryphoneno"
               name="secondryphoneno"
               value={this.props.primaryphoneno || ""}
@@ -112,7 +114,7 @@ export class OnboardingBasicFields extends Component {
           </div>
           <div className="col-md-6 text-left disInline">
           <PhoneInput
-              country={'us'}
+              country={'in'}
               id="otherphoneno"
               name="otherphoneno"
               value={this.props.primaryphoneno || ""}
