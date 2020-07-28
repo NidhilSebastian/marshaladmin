@@ -7,14 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.msa-header{
+.msa-header {
   /* background-color:#EBEBEB; */
-    height: 53px;
+  height: 53px;
 }
 
-.msa-header-text{
-  padding: 14px;
-    font-weight: bold;
+.msa-header-text {
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.msa-label-text {
+  font-size: 12px;
 }
 
 code {

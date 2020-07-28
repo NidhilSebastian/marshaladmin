@@ -22,7 +22,7 @@ export class ProfilePhoneFields extends Component {
       <>
         <div className="row">
           <div className="col-md-2 pt-4">
-            <label>Primary mobile number</label>
+            <label className="msa-label-text">Primary mobile number</label>
             <PhoneInput
               country={"us"}
               id="primarymobilenumber"
@@ -34,7 +34,7 @@ export class ProfilePhoneFields extends Component {
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-2 pt-4">
-            <label>Alternate mobile number</label>
+            <label className="msa-label-text">Alternate mobile number</label>
             <PhoneInput
               country={"us"}
               id="alternatemobilenumber"
@@ -46,7 +46,7 @@ export class ProfilePhoneFields extends Component {
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-2 pt-4">
-            <label>Country</label>
+            <label className="msa-label-text">Country</label>
             <DropDown
               name="country"
               className="msa-input-box-01"
@@ -59,7 +59,7 @@ export class ProfilePhoneFields extends Component {
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-2 pt-4">
-            <label>State</label>
+            <label className="msa-label-text">State</label>
             <DropDown
               name="state"
               className="msa-input-box-01"
@@ -73,7 +73,7 @@ export class ProfilePhoneFields extends Component {
         </div>
         <div className="row">
           <div className="col-md-5 pt-4">
-            <label>Address/Location</label>
+            <label className="msa-label-text">Address/Location</label>
             <Text
               id="address"
               name="address"
@@ -85,7 +85,7 @@ export class ProfilePhoneFields extends Component {
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-2 pt-4">
-            <label>City</label>
+            <label className="msa-label-text">City</label>
             <DropDown
               name="city"
               className="msa-input-box-01"
@@ -98,7 +98,7 @@ export class ProfilePhoneFields extends Component {
           </div>
           <div className="col-md-1"></div>
           <div className="col-md-2 pt-4">
-            <label>Zip code</label>
+            <label className="msa-label-text">Zip code</label>
             <Text
               id="zipcode"
               name="zipcode"
@@ -111,7 +111,7 @@ export class ProfilePhoneFields extends Component {
         </div>
         <div className="row">
           <div className="col-md-5 pt-4">
-            <label>Landmark</label>
+            <label className="msa-label-text">Landmark</label>
             <Text
               id="landmark"
               name="landmark"

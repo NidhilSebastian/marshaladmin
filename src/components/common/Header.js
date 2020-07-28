@@ -2,9 +2,11 @@ import React from "react";
 
 const Header = (props) => {
   return (
-    <div className="msa-header">
-         <h5 className="msa-header-text">{props.headerContent}</h5>
+    <div className="row">
+      <div className="col-md-12 ">
+        <label className="msa-header-text">{props.headerContent}</label>
       </div>
+    </div>
   );
 };
 

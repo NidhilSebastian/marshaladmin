@@ -12,6 +12,7 @@ export class NavbarLeft extends Component {
     homeLinkClassName: "active",
     profileLinkClassName: "",
     LogOutLinkClassName: "",
+    signUpClassName: "",
   };
 
   onLinkClick = async (linkName, e) => {
@@ -21,6 +22,7 @@ export class NavbarLeft extends Component {
           homeLinkClassName: "active",
           profileLinkClassName: "",
           LogOutLinkClassName: "",
+          signUpClassName: "",
         });
         break;
       case NAVIGATION_LINKs.PROFILE_LINK:
@@ -28,6 +30,15 @@ export class NavbarLeft extends Component {
           homeLinkClassName: "",
           profileLinkClassName: "active",
           LogOutLinkClassName: "",
+          signUpClassName: "",
+        });
+        break;
+      case NAVIGATION_LINKs.SIGN_UP_LINK:
+        this.setState({
+          homeLinkClassName: "",
+          profileLinkClassName: "",
+          LogOutLinkClassName: "",
+          signUpClassName: "active",
         });
         break;
       case NAVIGATION_LINKs.LOGOUT_LINK:
@@ -35,6 +46,7 @@ export class NavbarLeft extends Component {
         this.setState({
           homeLinkClassName: "",
           profileLinkClassName: "",
+          signUpClassName: "",
           LogOutLinkClassName: "active",
         });
         break;
@@ -58,6 +70,12 @@ export class NavbarLeft extends Component {
             onClick={(e) => this.onLinkClick(NAVIGATION_LINKs.PROFILE_LINK, e)}
           >
             <Link to="/profile">My Profile</Link>
+          </li>
+          <li
+            className={this.state.signUpClassName}
+            onClick={(e) => this.onLinkClick(NAVIGATION_LINKs.SIGN_UP_LINK, e)}
+          >
+            <Link to="/signup">Signup</Link>
           </li>
         </ul>
         <ul className="msa-nav msa-nav-align-bottom">

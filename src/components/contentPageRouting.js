@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "../components/home/home";
 import UserProfile from "../components/Profile/userProfile";
+import AdminSignup from "../components/Signup/adminSignup";
 
 const ContentPageRouting = () => {
   return (
@@ -9,6 +10,7 @@ const ContentPageRouting = () => {
       <Route exact path="/" component={Home}></Route>
       <Route exact path="/home" component={Home}></Route>
       <Route exact path="/profile" component={UserProfile}></Route>
+      <Route exact path="/signup" component={AdminSignup}></Route>
     </Switch>
   );
 };
