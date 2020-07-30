@@ -60,6 +60,30 @@
   font-size: 12px;
   padding-top: 20px;
 }
-.msa-btn-signup {
+x .msa-btn-signup {
   width: 90%;
+}
+
+.msa-signup_colum {
+  background-color: #168196;
+  border-radius: 5px;
+}
+.msa-signup-div-shadow {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.4), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
+}
+
+.msa-input-box-02 {
+  font-size: 14px;
+  background: #fdfdfd;
+  border: 1px solid #e4e4e4 !important;
+  width: 100%;
+  color: #17a2b8;
+  border-radius: 2px;
+  padding: 7px 10px;
+  font-family: Helvetica, Arial, "Times New Roman";
+  border-radius: 10px;
+}
+.msa-signup-header_content-div {
+  background-color: whitesmoke;
 }

@@ -10,7 +10,6 @@ const ContentPageRouting = () => {
       <Route exact path="/" component={Home}></Route>
       <Route exact path="/home" component={Home}></Route>
       <Route exact path="/profile" component={UserProfile}></Route>
-      <Route exact path="/signup" component={AdminSignup}></Route>
     </Switch>
   );
 };

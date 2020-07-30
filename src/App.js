@@ -4,13 +4,13 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { actionCreators } from "./store/reducers/application";
 import { withRouter } from "react-router-dom";
-import Login from "./components/login/login";
+import PublicLayout from "./components/publicLayout/publicLayout";
 import Layout from "./components/layout";
 
 const App = (props) => {
   //const appLayout = <Layout {...props}></Layout>;
   const appLayout = !props.user ? (
-    <Login {...props}> </Login>
+    <PublicLayout {...props}> </PublicLayout>
   ) : (
     <Layout {...props}></Layout>
   );

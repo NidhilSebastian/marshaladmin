@@ -22,7 +22,7 @@ const Layout = (props) => {
         <div className="col-sm-1 msa-nav-bar-left border">
           <NavBarLeft {...props}></NavBarLeft>
         </div>
-        <div className="col-sm-11">
+        <div className="col-sm-11 msa-conent-div">
           <div className="msa-content-body">
             <div className="row">
               <div className="col-sm-12 msa-col-body">
