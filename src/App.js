@@ -6,6 +6,7 @@ import { actionCreators } from "./store/reducers/application";
 import { withRouter } from "react-router-dom";
 import PublicLayout from "./components/publicLayout/publicLayout";
 import Layout from "./components/layout";
+import { NotificationContainer } from "react-notifications";
 
 const App = (props) => {
   //const appLayout = <Layout {...props}></Layout>;
@@ -15,7 +16,12 @@ const App = (props) => {
     <Layout {...props}></Layout>
   );
 
-  return <>{appLayout}</>;
+  return (
+    <>
+      {appLayout}
+      <NotificationContainer />
+    </>
+  );
 };
 
 //export default App;

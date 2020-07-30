@@ -4,7 +4,6 @@ import NavBarLeft from "./navbarLeft";
 import ContentPageRouting from "./contentPageRouting";
 import "../styles/css/boostrap-theme.css";
 import "react-notifications/lib/notifications.css";
-import { NotificationContainer } from "react-notifications";
 import girmitilogo from "../images/girmiti_logo.png";
 
 const Layout = (props) => {
@@ -39,7 +38,6 @@ const Layout = (props) => {
           </label>
         </div>
       </div>
-      <NotificationContainer />
     </div>
   );
 };

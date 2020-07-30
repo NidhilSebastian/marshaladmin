@@ -3,6 +3,7 @@ import DropDown from "../common/DropDown";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import SignupFields from "./signupFields";
+import { NotificationManager } from "react-notifications";
 
 export class AdminSignup extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export class AdminSignup extends Component {
   onSignUpHandler = async (e) => {
     let loginUrl = "/";
     this.props.history.push(loginUrl);
+    NotificationManager.success("Sign up completed successfully", "SignUp");
   };
 
   render() {
