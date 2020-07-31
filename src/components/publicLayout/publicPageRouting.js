@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Login from "../login/login";
 import SignUp from "../Signup/adminSignup";
+import ForgotPasswordWizard from "../forgotPassword/forgotPassword";
 
 const PublicPageRouting = (props) => {
   return (
@@ -12,6 +13,11 @@ const PublicPageRouting = (props) => {
         exact
         path="/signup"
         component={() => <SignUp {...props} />}
+      ></Route>
+      <Route
+        exact
+        path="/forgotpassword"
+        component={() => <ForgotPasswordWizard {...props} />}
       ></Route>
     </Switch>
   );

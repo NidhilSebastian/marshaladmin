@@ -35,6 +35,10 @@ class Login extends Component {
     let signUpUrl = "/signup";
     this.props.history.push(signUpUrl);
   };
+  onForgotpasswordUpHandler = async (e) => {
+    let signUpUrl = "/forgotpassword";
+    this.props.history.push(signUpUrl);
+  };
 
   render() {
     return (
@@ -131,6 +135,7 @@ class Login extends Component {
                       type="submit"
                       value="Forgot Password?"
                       className="btn btn-link msa-login-forgot-link"
+                      onClick={this.onForgotpasswordUpHandler}
                     ></input>
                   </div>
                 </div>
