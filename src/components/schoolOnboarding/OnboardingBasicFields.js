@@ -5,20 +5,65 @@ import Header from "../common/Header";
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import Switch from "react-switch";
+import Button from "../common/Button";
 
 export class OnboardingBasicFields extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { checked: false };
     this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      
+    };
   }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log('submited.');
+  }
+
+  handleCancel(e) {
+    e.preventDefault();
+    console.log('canceled.');
+  }
+
   handleChange(checked) {
     this.setState({ checked });
+  }
+
+  handleFieldsChanges(e) {
+    //this.setState({value: event.target.value});
+    console.log('changed.');
   }
   render() {
     return (
       <>
-      <Header headerContent="School Onboarding Form"/>
+      
+      <div className="raw pt-4">
+          <div className="col-md-10 text-left disInline">
+          <Header headerContent="School Onboarding Form"/>
+          </div>
+          <div className="col-md-1 text-left disInline">
+          <Button
+              id="saveschoolform"
+              icon="fa fa-save"
+              text="Save"
+              type="submit"
+              className="btn btn-primary"
+              onClick="handleSubmit"
+            />
+          </div>
+          <div className="col-md-1 text-left disInline">
+          <Button
+              id="cancelschoolform"
+              icon="fa fa-times"
+              text="Cancel"
+              type="submit"
+              className="btn btn-light"
+              onClick="handleCancel"
+            />
+          </div>
+        </div> 
         <div className="raw pb-4 pt-4">
           <div className="col-md-6 text-left disInline">
             <Text
@@ -28,6 +73,7 @@ export class OnboardingBasicFields extends Component {
               placeholder="School Name"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
@@ -38,6 +84,7 @@ export class OnboardingBasicFields extends Component {
               placeholder="Address/Location"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>        
@@ -50,6 +97,7 @@ export class OnboardingBasicFields extends Component {
               placeholder="Landmark"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
@@ -58,7 +106,7 @@ export class OnboardingBasicFields extends Component {
               className="msa-input-box-01"
               options=""
               value=""
-              onChange=""
+              onChange={this.handleFieldsChanges}
               tabIndex=""
               selectName="--select country--"
           />
@@ -71,7 +119,7 @@ export class OnboardingBasicFields extends Component {
               className="msa-input-box-01"
               options=""
               value=""
-              onChange=""
+              onChange={this.handleFieldsChanges}
               tabIndex=""
               selectName="--select state--"
           />
@@ -82,7 +130,7 @@ export class OnboardingBasicFields extends Component {
               className="msa-input-box-01"
               options=""
               value=""
-              onChange=""
+              onChange={this.handleFieldsChanges}
               tabIndex=""
               selectName="--select city--"
           />
@@ -97,37 +145,39 @@ export class OnboardingBasicFields extends Component {
               placeholder="ZipCode"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">          
             <PhoneInput
               country={'in'}
-              id="primaryphoneno"
-              name="primaryphoneno"
-              value={this.props.primaryphoneno || ""}
+              id="primaryPhone"
+              name="primaryPhone"
+              value={this.props.primaryPhone || ""}
               containerClass="react-tel-input-01"
-             //onChange={phone => this.setState({ phone })}
-            />
+              onChange={this.handleFieldsChanges}            />
           </div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
           <PhoneInput
               country={'in'}
-              id="secondryphoneno"
-              name="secondryphoneno"
-              value={this.props.primaryphoneno || ""}
+              id="secondaryPhone"
+              name="secondaryPhone"
+              value={this.props.secondaryPhone || ""}
               containerClass="react-tel-input-01"
+              onChange={this.handleFieldsChanges}
              //onChange={phone => this.setState({ phone })}
             />
           </div>
           <div className="col-md-6 text-left disInline">
           <PhoneInput
               country={'in'}
-              id="otherphoneno"
-              name="otherphoneno"
-              value={this.props.primaryphoneno || ""}
+              id="OtherPhone"
+              name="OtherPhone"
+              value={this.props.OtherPhone || ""}
               containerClass="react-tel-input-01"
+              onChange={this.handleFieldsChanges}
              //onChange={phone => this.setState({ phone })}
             />
           </div>
@@ -141,59 +191,65 @@ export class OnboardingBasicFields extends Component {
               placeholder="Fax"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
             <Text
-              id="emailid"
-              name="emailid"
-              value={this.props.emailid || ""}
+              id="emailId"
+              name="emailId"
+              value={this.props.emailId || ""}
               placeholder="Email Id"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
             <Text
-              id="board"
-              name="board"
-              value={this.props.board || ""}
+              id="recognitionBoard"
+              name="recognitionBoard"
+              value={this.props.recognitionBoard || ""}
               placeholder="Recognition By/Board"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
             <Text
-              id="affiliationno"
-              name="affiliationno"
-              value={this.props.affiliationno || ""}
+              id="AffiliationBoard"
+              name="AffiliationBoard"
+              value={this.props.AffiliationBoard || ""}
               placeholder="Affiliation Number"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
             <Text
-              id="affiliationperiod"
-              name="affiliationperiod"
-              value={this.props.affiliationperiod || ""}
+              id="AffiliationPeriod"
+              name="AffiliationPeriod"
+              value={this.props.AffiliationPeriod || ""}
               placeholder="Affiliation Period"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
           <DropDown
-              name="foundedin"
+              id="foundedIn"
+              name="foundedIn"
               className="msa-input-box-01"
               options=""
               value=""
-              onChange=""
+              onChange={this.handleFieldsChanges}
               tabIndex=""
               selectName="--select founded year--"
           />
@@ -208,82 +264,90 @@ export class OnboardingBasicFields extends Component {
               placeholder="Inauguration Date"
               type="date"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
             <Text
-              id="principalqualification"
-              name="principalqualification"
-              value={this.props.principalqualification || ""}
+              id="pricnipalQualification"
+              name="pricnipalQualification"
+              value={this.props.pricnipalQualification || ""}
               placeholder="Principal Qualification"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
             <Text
-              id="principalworkexp"
-              name="principalworkexp"
-              value={this.props.principalworkexp || ""}
+              id="principalWorkExperience"
+              name="principalWorkExperience"
+              value={this.props.principalWorkExperience || ""}
               placeholder="Principal Work Experience"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
             <Text
-              id="societytrustname"
-              name="societytrustname"
-              value={this.props.societytrustname || ""}
+              id="socityTrustName"
+              name="socityTrustName"
+              value={this.props.socityTrustName || ""}
               placeholder="Society/Trust Name"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
             <Text
-              id="edusystem"
-              name="edusystem"
-              value={this.props.edusystem || ""}
+              id="educationalSystem"
+              name="educationalSystem"
+              value={this.props.educationalSystem || ""}
               placeholder="Educational System"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
             <Text
-              id="learningmedium"
-              name="learningmedium"
-              value={this.props.learningmedium || ""}
+              id="LearningMedium"
+              name="LearningMedium"
+              value={this.props.LearningMedium || ""}
               placeholder="Learning Medium"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
             <Text
-              id="classrooms"
-              name="classrooms"
-              value={this.props.classrooms || ""}
+              id="numberOfClassRooms"
+              name="numberOfClassRooms"
+              value={this.props.numberOfClassRooms || ""}
               placeholder="Number of Classrooms"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
             <Text
-              id="labs"
-              name="labs"
-              value={this.props.labs || ""}
+              id="numberOfLabs"
+              name="numberOfLabs"
+              value={this.props.numberOfLabs || ""}
               placeholder="Number of Labs"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>
@@ -293,7 +357,12 @@ export class OnboardingBasicFields extends Component {
           </div>
           <div className="col-md-3 text-left disInline rbdSwitch">
           <label>
-            <Switch offColor='#FF0000' onChange={this.handleChange} checked={this.state.checked} />
+            <Switch 
+            id="isLibraryAvilable"
+            name="isLibraryAvilable"
+            offColor='#FF0000' 
+            onChange={this.handleChange} 
+            checked={this.state.checked} />
           </label>
           </div>
           <div className="col-md-3 text-left disInline">
@@ -303,22 +372,24 @@ export class OnboardingBasicFields extends Component {
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
             <Text
-              id="schoolarea"
-              name="schoolarea"
-              value={this.props.schoolarea || ""}
+              id="schoolAreaSize"
+              name="schoolAreaSize"
+              value={this.props.schoolAreaSize || ""}
               placeholder="School Area Size"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
             <Text
-              id="playarea"
-              name="playarea"
-              value={this.props.playarea || ""}
+              id="playAreaSize"
+              name="playAreaSize"
+              value={this.props.playAreaSize || ""}
               placeholder="Play Area Size"
               type="text"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>
@@ -331,6 +402,7 @@ export class OnboardingBasicFields extends Component {
               value={this.props.uploadimg || ""}
               type="file"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
@@ -341,6 +413,7 @@ export class OnboardingBasicFields extends Component {
               value={this.props.uploadlogo || ""}
               type="file"
               className="msa-input-box-01"
+              onChange={this.handleFieldsChanges}
             ></Text>
           </div>
         </div>

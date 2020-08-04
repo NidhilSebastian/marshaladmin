@@ -7,6 +7,11 @@ const ActionTypes = {
     RESPONSE_ERROR_STATUS: "RESPONSE_ERROR_STATUS",
     REPORT_UNHANDLED_ERROR: "REPORT_UNHANDLED_ERROR",
   },
+  SchoolOnboarding: {
+    GET_COUNTRY_LIST: "GET_COUNTRY_LIST",
+    GET_STATE_LIST: "GET_STATE_LIST",
+    GET_CITY_LIST: "GET_CITY_LIST",
+  },
 };
 
 export default ActionTypes;

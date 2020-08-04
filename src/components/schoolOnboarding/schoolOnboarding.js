@@ -12,9 +12,19 @@ export class SchoolOnboarding extends Component {
     };
   }
 
+  async componentDidMount() {
+    await this.props.getCountres();
+    await this.props.getStates();
+    await this.props.getCites();
+  }
+
   render() {
-    return <BasicFields {...this.state}></BasicFields>;
+    //let images = this.props.imageList;
+    return <BasicFields {...this.state} {...this.props}></BasicFields>;
   }
 }
 
-export default SchoolOnboarding;
+export default connect(
+  (state) => ({ ...state.SchoolOnboarding }),
+  (dispatch) => bindActionCreators(actionCreators, dispatch)
+)(SchoolOnboarding);
