@@ -27,7 +27,8 @@ export class Stepthree extends Component {
         </div>
 
         <div className="row p-2">
-          <div className="col-sm-4">
+          <div className="col-sm-4">&nbsp;</div>
+          <div className="col-sm-4 text-center">
             <div className="input-group form-group">
               <div className="input-group-prepend">
                 <span className="input-group-text">
@@ -44,11 +45,12 @@ export class Stepthree extends Component {
               ></input>
             </div>
           </div>
-          <div className="col-sm-6"></div>
+          <div className="col-sm-4"></div>
         </div>
 
         <div className="row p-2">
-          <div className="col-sm-4">
+          <div className="col-sm-4">&nbsp;</div>
+          <div className="col-sm-4 text-center">
             <div className="input-group form-group">
               <div className="input-group-prepend">
                 <span className="input-group-text">
@@ -65,10 +67,11 @@ export class Stepthree extends Component {
               ></input>
             </div>
           </div>
-          <div className="col-sm-6"></div>
+          <div className="col-sm-4"></div>
         </div>
 
         <div className="row pb-4">
+          <div className="col-sm-4">&nbsp;</div>
           <div className="col-sm-4 text-center">
             <input
               type="button"
