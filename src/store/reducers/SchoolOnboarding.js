@@ -1,53 +1,27 @@
-import { HomeInitialState } from "../initialState";
+import { SchoolonboardingInitialState } from "../initialState";
 import * as Actions from "../actions/SchoolOnboarding";
 import ActionTypes from "../../utils/actionTypes";
 import * as GlobalStore from "../global";
 
-
-
 export const actionCreators = {
-    getCountry: () => async (dispatch, getState) => {
-    let response = await Actions.getCountry();
+  saveSchoolOnboarding: (schoolonboarding) => async (dispatch, getState) => {
+    let response = await Actions.saveSchoolOnboarding(schoolOnboarding);
     dispatch(response);
   },
 };
 
-export const CountryReducer = (state = CountryInitialState, action) => {
+export const SchoolOnboardingReducer = (
+  state = SchoolonboardingInitialState,
+  action
+) => {
   if (GlobalStore.isGlobalAction(action)) {
     return GlobalStore.globalReducer(state, action);
   } else {
     switch (action.type) {
-      case ActionTypes.SchoolOnboarding.GET_COUNTRY_LIST:
+      case ActionTypes.SchoolOnboarding.SAVE_SCHOOL_ONBOARDING:
         return { ...state, ...action.data };
       default:
         return { ...state, errorMessage: null };
     }
   }
 };
-
-
-export const CountryReducer = (state = CountryInitialState, action) => {
-    if (GlobalStore.isGlobalAction(action)) {
-      return GlobalStore.globalReducer(state, action);
-    } else {
-      switch (action.type) {
-        case ActionTypes.SchoolOnboarding.GET_STATE_LIST:
-          return { ...state, ...action.data };
-        default:
-          return { ...state, errorMessage: null };
-      }
-    }
-  };
-
-  export const CountryReducer = (state = CountryInitialState, action) => {
-    if (GlobalStore.isGlobalAction(action)) {
-      return GlobalStore.globalReducer(state, action);
-    } else {
-      switch (action.type) {
-        case ActionTypes.SchoolOnboarding.GET_CITY_LIST:
-          return { ...state, ...action.data };
-        default:
-          return { ...state, errorMessage: null };
-      }
-    }
-  };

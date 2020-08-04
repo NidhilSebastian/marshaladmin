@@ -1,6 +1,6 @@
 export const defaultProperties = {
   id: "",
-  schoolName: "",
+  school_Name: "",
   address: "",
   landMark: "",
   country: "",
@@ -28,7 +28,9 @@ export const defaultProperties = {
   playAreaSize: "",
 };
 
-export const mapToUiModel = (onboardingApiModel) => {
+export const mapToApiModel = (onboardingUiModel) => {
   const SchoolOnboardingModel = Object.assign({ ...defaultProperties });
-  SchoolOnboardingModel.id = onboardingApiModel.id;
+
+  SchoolOnboardingModel.id = onboardingUiModel.id;
+  SchoolOnboardingModel.school_Name = onboardingUiModel.schoolName;
 };

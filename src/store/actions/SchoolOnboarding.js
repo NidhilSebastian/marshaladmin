@@ -1,27 +1,18 @@
-import * as ImageService from "../../api/imageService";
+import * as schoolOnBoardingServices from "../../api/schoolOnBoardingServices";
 import ActionTypes from "../../utils/actionTypes";
 import * as CommonActions from "../actions/common";
 
-export const getCountry = async () => {
+import * as modelConverter from "../../models/api/schoolOnboarding";
+
+export const saveSchoolOnboarding = async (schoolonboarding) => {
   try {
-    let imageResponse = {
-      imageList: [],
-    };
-    let response = await ImageService.getCountry();
-    if (response.data != null && response.data.results.length > 0) {
-      response.data.results.forEach((element) => {
-        const image = {
-          imageUrl: element.urls.small,
-          title: element.alt_description,
-          description: element.description,
-          author: element.user.first_name,
-        };
-        imageResponse.imageList.push(image);
-      });
-    }
+    let onboardingApimodel = modelConverter.mapToApiModel(schoolonboarding);
+    let response = schoolOnBoardingServices.saveSchoolOnboarding(
+      onboardingApimodel
+    );
     return {
-      type: ActionTypes.SchoolOnboarding.GET_COUNTRY_LIST,
-      data: imageResponse,
+      type: ActionTypes.SchoolOnboarding.SAVE_SCHOOL_ONBOARDING,
+      data: response,
     };
   } catch (error) {
     return CommonActions.getRequestErrorAction(
@@ -29,61 +20,3 @@ export const getCountry = async () => {
     );
   }
 };
-
-
-export const getState = async () => {
-    try {
-      let imageResponse = {
-        imageList: [],
-      };
-      let response = await ImageService.getState();
-      if (response.data != null && response.data.results.length > 0) {
-        response.data.results.forEach((element) => {
-          const image = {
-            imageUrl: element.urls.small,
-            title: element.alt_description,
-            description: element.description,
-            author: element.user.first_name,
-          };
-          imageResponse.imageList.push(image);
-        });
-      }
-      return {
-        type: ActionTypes.SchoolOnboarding.GET_STATE_LIST,
-        data: imageResponse,
-      };
-    } catch (error) {
-      return CommonActions.getRequestErrorAction(
-        "Network error occured: Failed to get the images.."
-      );
-    }
-  };
-
-  export const getCity = async () => {
-    try {
-      let imageResponse = {
-        imageList: [],
-      };
-      let response = await ImageService.getCity();
-      if (response.data != null && response.data.results.length > 0) {
-        response.data.results.forEach((element) => {
-          const image = {
-            imageUrl: element.urls.small,
-            title: element.alt_description,
-            description: element.description,
-            author: element.user.first_name,
-          };
-          imageResponse.imageList.push(image);
-        });
-      }
-      return {
-        type: ActionTypes.SchoolOnboarding.GET_CITY_LIST,
-        data: imageResponse,
-      };
-    } catch (error) {
-      return CommonActions.getRequestErrorAction(
-        "Network error occured: Failed to get the images.."
-      );
-    }
-  };
-  

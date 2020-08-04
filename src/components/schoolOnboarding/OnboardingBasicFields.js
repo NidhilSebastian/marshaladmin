@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Text from "../common/Textbox";
 import DropDown from "../common/DropDown";
 import Header from "../common/Header";
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import Switch from "react-switch";
 import Button from "../common/Button";
 
@@ -12,19 +12,17 @@ export class OnboardingBasicFields extends Component {
     super(props);
     this.state = { checked: false };
     this.handleChange = this.handleChange.bind(this);
-    this.state = {
-      
-    };
+    this.state = {};
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('submited.');
+    console.log("submited.");
   }
 
   handleCancel(e) {
     e.preventDefault();
-    console.log('canceled.');
+    console.log("canceled.");
   }
 
   handleChange(checked) {
@@ -33,18 +31,17 @@ export class OnboardingBasicFields extends Component {
 
   handleFieldsChanges(e) {
     //this.setState({value: event.target.value});
-    console.log('changed.');
+    console.log("changed.");
   }
   render() {
     return (
       <>
-      
-      <div className="raw pt-4">
+        <div className="raw pt-4">
           <div className="col-md-10 text-left disInline">
-          <Header headerContent="School Onboarding Form"/>
+            <Header headerContent="School Onboarding Form" />
           </div>
           <div className="col-md-1 text-left disInline">
-          <Button
+            <Button
               id="saveschoolform"
               icon="fa fa-save"
               text="Save"
@@ -54,7 +51,7 @@ export class OnboardingBasicFields extends Component {
             />
           </div>
           <div className="col-md-1 text-left disInline">
-          <Button
+            <Button
               id="cancelschoolform"
               icon="fa fa-times"
               text="Cancel"
@@ -63,7 +60,7 @@ export class OnboardingBasicFields extends Component {
               onClick="handleCancel"
             />
           </div>
-        </div> 
+        </div>
         <div className="raw pb-4 pt-4">
           <div className="col-md-6 text-left disInline">
             <Text
@@ -87,7 +84,7 @@ export class OnboardingBasicFields extends Component {
               onChange={this.handleFieldsChanges}
             ></Text>
           </div>
-        </div>        
+        </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
             <Text
@@ -101,7 +98,7 @@ export class OnboardingBasicFields extends Component {
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
-          <DropDown
+            <DropDown
               name="country"
               className="msa-input-box-01"
               options=""
@@ -109,12 +106,12 @@ export class OnboardingBasicFields extends Component {
               onChange={this.handleFieldsChanges}
               tabIndex=""
               selectName="--select country--"
-          />
+            />
           </div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
-          <DropDown
+            <DropDown
               name="state"
               className="msa-input-box-01"
               options=""
@@ -122,10 +119,10 @@ export class OnboardingBasicFields extends Component {
               onChange={this.handleFieldsChanges}
               tabIndex=""
               selectName="--select state--"
-          />
+            />
           </div>
           <div className="col-md-6 text-left disInline">
-          <DropDown
+            <DropDown
               name="city"
               className="msa-input-box-01"
               options=""
@@ -133,7 +130,7 @@ export class OnboardingBasicFields extends Component {
               onChange={this.handleFieldsChanges}
               tabIndex=""
               selectName="--select city--"
-          />
+            />
           </div>
         </div>
         <div className="raw pb-4">
@@ -148,37 +145,38 @@ export class OnboardingBasicFields extends Component {
               onChange={this.handleFieldsChanges}
             ></Text>
           </div>
-          <div className="col-md-6 text-left disInline">          
+          <div className="col-md-6 text-left disInline">
             <PhoneInput
-              country={'in'}
+              country={"in"}
               id="primaryPhone"
               name="primaryPhone"
               value={this.props.primaryPhone || ""}
               containerClass="react-tel-input-01"
-              onChange={this.handleFieldsChanges}            />
+              onChange={this.handleFieldsChanges}
+            />
           </div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
-          <PhoneInput
-              country={'in'}
+            <PhoneInput
+              country={"in"}
               id="secondaryPhone"
               name="secondaryPhone"
               value={this.props.secondaryPhone || ""}
               containerClass="react-tel-input-01"
               onChange={this.handleFieldsChanges}
-             //onChange={phone => this.setState({ phone })}
+              //onChange={phone => this.setState({ phone })}
             />
           </div>
           <div className="col-md-6 text-left disInline">
-          <PhoneInput
-              country={'in'}
+            <PhoneInput
+              country={"in"}
               id="OtherPhone"
               name="OtherPhone"
               value={this.props.OtherPhone || ""}
               containerClass="react-tel-input-01"
               onChange={this.handleFieldsChanges}
-             //onChange={phone => this.setState({ phone })}
+              //onChange={phone => this.setState({ phone })}
             />
           </div>
         </div>
@@ -243,7 +241,7 @@ export class OnboardingBasicFields extends Component {
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
-          <DropDown
+            <DropDown
               id="foundedIn"
               name="foundedIn"
               className="msa-input-box-01"
@@ -252,7 +250,7 @@ export class OnboardingBasicFields extends Component {
               onChange={this.handleFieldsChanges}
               tabIndex=""
               selectName="--select founded year--"
-          />
+            />
           </div>
         </div>
         <div className="raw pb-4">
@@ -356,18 +354,17 @@ export class OnboardingBasicFields extends Component {
             <label className="disInline">Library Available</label>
           </div>
           <div className="col-md-3 text-left disInline rbdSwitch">
-          <label>
-            <Switch 
-            id="isLibraryAvilable"
-            name="isLibraryAvilable"
-            offColor='#FF0000' 
-            onChange={this.handleChange} 
-            checked={this.state.checked} />
-          </label>
+            <label>
+              <Switch
+                id="isLibraryAvilable"
+                name="isLibraryAvilable"
+                offColor="#FF0000"
+                onChange={this.handleChange}
+                checked={this.state.checked}
+              />
+            </label>
           </div>
-          <div className="col-md-3 text-left disInline">
-          
-          </div>       
+          <div className="col-md-3 text-left disInline"></div>
         </div>
         <div className="raw pb-4">
           <div className="col-md-6 text-left disInline">
@@ -406,8 +403,8 @@ export class OnboardingBasicFields extends Component {
             ></Text>
           </div>
           <div className="col-md-6 text-left disInline">
-          <label className="disInline">Upload Logo</label>
-          <Text
+            <label className="disInline">Upload Logo</label>
+            <Text
               id="uploadlogo"
               name="uploadlogo"
               value={this.props.uploadlogo || ""}

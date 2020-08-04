@@ -11,3 +11,14 @@ export const HomeInitialState = {
   ...globalState,
   imageList: [],
 };
+
+export const AddressInitialState = {
+  ...globalState,
+  countryList: [],
+  stateList: [],
+  cityList: [],
+};
+
+export const SchoolonboardingInitialState = {
+  ...globalState,
+};

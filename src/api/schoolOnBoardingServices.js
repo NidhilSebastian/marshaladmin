@@ -1,38 +1,10 @@
 import axios from "axios";
 import * as CommonActions from "../store/actions/SchoolOnboarding";
 
-
-export const getCountres = async () => {
+export const saveSchoolOnboarding = async (schoolonboarding) => {
   try {
-    const url =
-      "http://localhost:9402/country";
-    const response = await axios.get(url);
-    return response;
-  } catch (error) {
-    return CommonActions.getRequestErrorAction(
-      "Network error occured: Failed to get the images."
-    );
-  }
-};
-
-export const getStates = async () => {
-  try {
-    const url =
-      "http://localhost:9402/state";
-    const response = await axios.get(url);
-    return response;
-  } catch (error) {
-    return CommonActions.getRequestErrorAction(
-      "Network error occured: Failed to get the images."
-    );
-  }
-};
-
-export const getCites = async () => {
-  try {
-    const url =
-      "http://localhost:9402/city";
-    const response = await axios.get(url);
+    const url = "http://localhost:9402/school";
+    const response = await axios.post(url, schoolonboarding);
     return response;
   } catch (error) {
     return CommonActions.getRequestErrorAction(
