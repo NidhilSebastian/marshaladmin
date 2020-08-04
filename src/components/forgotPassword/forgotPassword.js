@@ -34,7 +34,7 @@ export class ForgotPasswordWizard extends Component {
         </div>
         <div className="row pt-2">
           <div className="col-sm-2"></div>
-          <div className="col-sm-8 pl-4 pr-4 msa-signup_colum msa-signup-div-shadow">
+          <div className="col-sm-8 text-center pl-4 pr-4 msa-signup_colum msa-signup-div-shadow">
             <div className="m-md manage-class-wizard">
               <div className="text-right">
                 <i

@@ -19,7 +19,8 @@ export class Stepone extends Component {
           <div className="col-sm-12">&nbsp;</div>
         </div>
         <div className="row">
-          <div className="col-sm-4">
+          <div className="col-sm-4">&nbsp;</div>
+          <div className="col-sm-4 text-center">
             <div className="input-group form-group">
               <div className="input-group-prepend">
                 <span className="input-group-text">
@@ -35,7 +36,7 @@ export class Stepone extends Component {
               ></input>
             </div>
           </div>
-          <div className="col-sm-6 text-center"></div>
+          <div className="col-sm-4"></div>
         </div>
         <div className="row">
           <div className="col-sm-12">&nbsp;</div>

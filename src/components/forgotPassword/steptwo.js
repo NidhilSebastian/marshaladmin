@@ -18,7 +18,8 @@ export class Steptwo extends Component {
           </div>
         </div>
         <div className="row p-4">
-          <div className="col-sm-4">
+          <div className="col-sm-4">&nbsp;</div>
+          <div className="col-sm-4 text-center">
             <OtpInput
               onChange={this.handleChange}
               separator={<span className="msa-otp-sperator-style">-</span>}
@@ -28,7 +29,7 @@ export class Steptwo extends Component {
               value={this.state.otp}
             />
           </div>
-          <div className="col-sm-6 text-center"></div>
+          <div className="col-sm-4 "></div>
         </div>
         <div className="row p-4">
           <div className="col-sm-12">
